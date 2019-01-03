@@ -1,6 +1,7 @@
 package com.company;
 
 public class bubbleSort {
+
     public static void bubbleSort(int[] arr){
         boolean swap = true;
         while(swap){
@@ -9,9 +10,10 @@ public class bubbleSort {
             swap = false;
             for(int i =0; i<arr.length-1; i++){
                 if(arr[i]>arr[i+1]){
-                    int temp = arr[i];
-                    arr[i]=arr[i+1];
-                    arr[i+1]=temp;
+                    sortingUtil.swap(arr, i, i+1);
+                    //int temp = arr[i];
+                    //arr[i]=arr[i+1];
+                    //arr[i+1]=temp;
                     //swapping has taken place so swap is true
                     swap = true;
                 }
