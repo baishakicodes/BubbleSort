@@ -1,12 +1,11 @@
 package com.company;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 
 public class BubbleSortRunner {
 
     public static void main(String[] args) {
 	// write your code here
-        int[] testArr= {8,6,7,5,3,0,9,10,1,2,4};
+        int[] testArr= {30,35,42,66,78,90,120,151,21,1,1111,49};
 
         //print out the unsorted array
         System.out.print("Before: ");
