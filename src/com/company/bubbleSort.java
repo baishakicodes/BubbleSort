@@ -38,5 +38,12 @@ public class bubbleSort {
             }
         }
     }
+    public static void selectionSort(int[] arr) {
+        int min = 0;
+        for(int i=0; i<arr.length; i++){
+            
+        }
+
+    }
 
 }

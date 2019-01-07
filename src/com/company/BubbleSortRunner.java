@@ -10,16 +10,16 @@ public class BubbleSortRunner {
 
         //print out the unsorted array
         System.out.print("Before: ");
-        for(int num:randArr){
+        for(int num:testArr){
             System.out.print(num+" ");
         }
         System.out.println();
         //sorting takes place here
-        bubbleSort.bubbleSort(randArr);
+        bubbleSort.selectionSort(testArr);
 
         //Print out new sorted array
         System.out.print("After: ");
-        for(int num:randArr){
+        for(int num:testArr){
             //int[] sortedArray = new int[randArr];
             System.out.print(num+" ");
         }
