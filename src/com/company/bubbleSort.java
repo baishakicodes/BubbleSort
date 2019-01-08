@@ -39,8 +39,25 @@ public class bubbleSort {
         }
     }
     public static void selectionSort(int[] arr) {
-        int min = 0;
+        //create values minVal and minIndex
+        int minVal, minIndex;
+        //the outer loop
         for(int i=0; i<arr.length; i++){
+            minVal=arr[i];
+            minIndex=i;
+            //the inner loop
+            for(int j=i; j<arr.length; j++){
+                //finds the minimum value in the array
+                if(arr[j]<minVal){
+                    minVal=arr[j];
+                    minIndex=j;
+                }
+            }
+            //this is where the swapping happens after we have found the min val
+            if(arr[i]>minVal){
+                sortingUtil.swap(arr, i, minIndex);
+            }
+
             
         }
 
