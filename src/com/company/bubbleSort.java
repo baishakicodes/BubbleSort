@@ -2,6 +2,7 @@ package com.company;
 
 public class bubbleSort {
 
+    //bubble sort for an array of integers
     public static void bubbleSort(int[] arr){
         boolean swap = true;
         while(swap){
@@ -22,9 +23,8 @@ public class bubbleSort {
         }
 
     }
+    //Another way to write the method bubble sort for integers
     public static void bubbleSortII(int[] arr){
-        //*another method for bubble sort
-
         //*the first for loop is for the out iteration
         for(int i =0; i<arr.length; i++){
         //*the second for loop is for the actual swapping in the first outer iteration
@@ -38,6 +38,7 @@ public class bubbleSort {
             }
         }
     }
+    //selection sort for integers
     public static void selectionSort(int[] arr) {
         //create values minVal and minIndex
         int minVal, minIndex;
@@ -62,6 +63,7 @@ public class bubbleSort {
         }
 
     }
+    //bubbleSort for strings
     public static void bubbleSort(String[] arr){
         //*another method for bubble sort
 
@@ -71,11 +73,37 @@ public class bubbleSort {
             //*the precondition j<arr.length-1 is so that we don't keep on going to the end of the array that is already sorted
             for(int j=1; j<arr.length-i; j++){
                 if(arr[j-1].compareTo(arr[j])>0) {
-                    String temp = arr[j - 1];
-                    arr[j - 1] = arr[j];
-                    arr[j] = temp;
+                    sortingUtil.swap(arr, j-1,j);
+                    //String temp = arr[j - 1];
+                    //arr[j - 1] = arr[j];
+                    //arr[j] = temp;
                 }
             }
+        }
+    }
+    //selection sort for doubles
+    public static void selectionSort(double[] arr){
+        //create values minVal and minIndex
+        double minVal;
+        int minIndex;
+        //the outer loop
+        for(int i=0; i<arr.length; i++){
+            minVal=arr[i];
+            minIndex=i;
+            //the inner loop
+            for(int j=i; j<arr.length; j++){
+                //finds the minimum value in the array
+                if(arr[j]<minVal){
+                    minVal=arr[j];
+                    minIndex=j;
+                }
+            }
+            //this is where the swapping happens after we have found the min val
+            if(arr[i]>minVal){
+                sortingUtil.swap(arr, i, minIndex);
+            }
+
+
         }
     }
 
