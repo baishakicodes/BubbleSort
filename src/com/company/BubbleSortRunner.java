@@ -19,7 +19,7 @@ public class BubbleSortRunner {
         }
         System.out.println();
         //sorting takes place here
-        bubbleSort.selectionSort(doubleArr);
+        bubbleSort.insertionSort(testArr);
 
         //Print out new sorted array
         System.out.print("After: ");

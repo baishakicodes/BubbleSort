@@ -58,4 +58,34 @@ public class sortingUtil {
         }
         return false;
     }
+    //method to create copy of an int Array
+    public static int[] copyOfArray(int[] arr){
+        int[] copy = new int[arr.length];
+        int count=0;
+        for(int i=0; i<arr.length; i++){
+            copy[count]=arr[i];
+            count++;
+        }
+        return copy;
+    }
+    //method to create copy of a string array
+    public static String[] copyOfArray(String[] arr){
+        String[] copy = new String[arr.length];
+        int count=0;
+        for(int i=0; i<arr.length; i++){
+            copy[count]=arr[i];
+            count++;
+        }
+        return copy;
+    }
+    //method to create copy of a double array
+    public static double[] copyOfArray(double[] arr){
+        double[] copy = new double[arr.length];
+        int count=0;
+        for(int i=0; i<arr.length; i++){
+            copy[count]=arr[i];
+            count++;
+        }
+        return copy;
+    }
 }
