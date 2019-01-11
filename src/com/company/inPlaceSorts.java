@@ -1,6 +1,6 @@
 package com.company;
 
-public class bubbleSort {
+public class inPlaceSorts {
 
     //bubble sort for an array of integers
     public static void bubbleSort(int[] arr){
@@ -106,11 +106,12 @@ public class bubbleSort {
 
         }
     }
+    //insertion sort for array of integers
     public static void insertionSort(int[] arr){
         int origIndex;
         for(int i=1;i<arr.length; i++){
             for(int j=i; j>0; j--){
-                if(arr[j-1]<arr[j]){
+                if(arr[j-1]>arr[j]){
                     sortingUtil.swap(arr, j-1, j);
                 }
             }

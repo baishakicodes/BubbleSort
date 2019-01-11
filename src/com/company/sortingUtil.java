@@ -41,6 +41,19 @@ public class sortingUtil {
         }
         return isSorted;
     }
+    //checks whether an array with doubles are sorted
+    public static boolean isSorted(double[] arr) {
+        boolean isSorted = true;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] < arr[i + 1]) {
+                isSorted = true;
+            } else {
+                isSorted = false;
+                break;
+            }
+        }
+        return isSorted;
+    }
     //checks whether the array is sorted by comparing the sum of the unsorted array and the sum of the sorted array.
     //If the sums are the same that means that nothing happened to the elements in the original array(unsorted array)
     //well for the most part it means nothing happened
@@ -58,6 +71,22 @@ public class sortingUtil {
         }
         return false;
     }
+    //checks the sum of the original array and the sorted array
+    public static boolean checkSum(double[] before, double[] after){
+        double beforeSum=0;
+        double afterSum=0;
+        for(int i=0;i<before.length; i++){
+            beforeSum = beforeSum + before[i];
+        }
+        for(int j=0; j<after.length; j++){
+            afterSum= afterSum+after[j];
+        }
+        if(beforeSum == afterSum){
+            return true;
+        }
+        return false;
+    }
+
     //method to create copy of an int Array
     public static int[] copyOfArray(int[] arr){
         int[] copy = new int[arr.length];
