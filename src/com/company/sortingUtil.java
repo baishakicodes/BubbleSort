@@ -27,32 +27,33 @@ public class sortingUtil {
         }
         return arr;
     }
+    //creates a random array of doubles
+    public static double[] randDoubleArr(int count){
+        double[] arr = new double[count];
+        for(int i=0; i<arr.length; i++){
+            arr[i] = (double)(Math.random()*101);
+        }
+        return arr;
+    }
+
     //checks whether the array is sorted or not.
     //this is only for arrays that have integer values in it
     public static boolean isSorted(int[] arr) {
-        boolean isSorted = true;
         for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] < arr[i + 1]) {
-                isSorted = true;
-            } else {
-                isSorted = false;
-                break;
+            if (arr[i] > arr[i + 1]) {
+                return false;
             }
         }
-        return isSorted;
+        return true;
     }
     //checks whether an array with doubles are sorted
     public static boolean isSorted(double[] arr) {
-        boolean isSorted = true;
         for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] < arr[i + 1]) {
-                isSorted = true;
-            } else {
-                isSorted = false;
-                break;
+            if (arr[i]> arr[i + 1]) {
+                return false;
             }
         }
-        return isSorted;
+        return true;
     }
     //checks whether the array is sorted by comparing the sum of the unsorted array and the sum of the sorted array.
     //If the sums are the same that means that nothing happened to the elements in the original array(unsorted array)
@@ -66,54 +67,42 @@ public class sortingUtil {
         for(int j=0; j<after.length; j++){
             afterSum= afterSum+after[j];
         }
-        if(beforeSum == afterSum){
-            return true;
-        }
-        return false;
+        return (beforeSum==afterSum);
     }
     //checks the sum of the original array and the sorted array
     public static boolean checkSum(double[] before, double[] after){
-        double beforeSum=0;
-        double afterSum=0;
+       double beforeSum=0;
         for(int i=0;i<before.length; i++){
             beforeSum = beforeSum + before[i];
         }
+        double afterSum=0;
         for(int j=0; j<after.length; j++){
-            afterSum= afterSum+after[j];
+            afterSum = afterSum+after[j];
         }
-        if(beforeSum == afterSum){
-            return true;
-        }
-        return false;
+        return (beforeSum==afterSum);
     }
 
     //method to create copy of an int Array
     public static int[] copyOfArray(int[] arr){
         int[] copy = new int[arr.length];
-        int count=0;
-        for(int i=0; i<arr.length; i++){
-            copy[count]=arr[i];
-            count++;
+        for(int i=0; i<arr.length; i++) {
+            copy[i] = arr[i];
         }
         return copy;
     }
     //method to create copy of a string array
     public static String[] copyOfArray(String[] arr){
         String[] copy = new String[arr.length];
-        int count=0;
         for(int i=0; i<arr.length; i++){
-            copy[count]=arr[i];
-            count++;
+            copy[i]=arr[i];
         }
         return copy;
     }
     //method to create copy of a double array
     public static double[] copyOfArray(double[] arr){
         double[] copy = new double[arr.length];
-        int count=0;
         for(int i=0; i<arr.length; i++){
-            copy[count]=arr[i];
-            count++;
+            copy[i]=arr[i];
         }
         return copy;
     }
